@@ -20,11 +20,12 @@ app.use("/stocks",stocksRoutes);
         console.log("Database Auth");
         await sequelize.sync({alter : true});
         console.log("Database connected");
-        app.listen(process.env.PORT || 3000,()=>{
+        app.listen(8081,()=>{
             console.log(`Server is running on port ${process.env.PORT}`)
         })
     } catch (error) {
         console.log(error)
     }
 })();
+
 
