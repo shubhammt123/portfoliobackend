@@ -19,7 +19,7 @@ app.use("/stocks",stocksRoutes);
         await sequelize.authenticate();
         console.log("Database Auth");
         await sequelize.sync({alter : true});
-        console.log("Database connected");
+        console.log("Database connected!!!!");
         app.listen(8081,()=>{
             console.log(`Server is running on port ${process.env.PORT}`)
         })
@@ -27,5 +27,6 @@ app.use("/stocks",stocksRoutes);
         console.log(error)
     }
 })();
+
 
 
